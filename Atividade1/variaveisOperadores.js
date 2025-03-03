@@ -1,6 +1,7 @@
-//Adição 
 let x = 10;
 let y = 5; 
+
+//Adição 
 let resultado = x + y;
 
 console.log(`O resultado da adição de x = ${x} mais y = ${y} é igual a ${resultado}`);
