@@ -1,37 +1,32 @@
-function imprimirMatriz(P){
-    for(let i = 0; i < P.length; i++){
-        let linha = "";
-        for(let j = 0; j < P[i].length; j++){
-            linha += P[i][j] + "\t";
-        }
-        console.log(linha);
-    }
-}
-
 function transporMatriz(matrizB){
-    let transposta = [];
-    for(let i = 0; i < matrizB[0].length; i++){
-        transposta[i] = [];
-        for(let j = 0; j < matrizB.length; j++){
-            transposta[i][j] = matrizB[j][i];
+    console.log("\nMatriz Original\n");
+    for(let i = 0; i < matrizB.length; i++){ //P.length diz a qtd de linhas
+        let linha = "";
+        for(let j = 0; j < matrizB[0].length; j++){ //para cada linha vejo a qtd de colunas
+            linha += matrizB[i][j] + "\t"; //linha recebe o elemento espaço elemento
         }
+        console.log(linha);//imprime a linha
     }
-    console.log("Matriz transposta:");
-    imprimirMatriz(transposta);
-    return transposta;
-}
 
+    console.log("\nMatriz transposta\n");
+    for(let j = 0; j < matrizB[0].length; j++){//percorrer primeiro as colunas
+        let linha = "";
+        for(let i = 0; i < matrizB.length; i++){ //depois percorre a linha
+            linha += matrizB[i][j] + "\t";
+        }
+        console.log(linha);//imprime a linha
+    } 
+
+}
 
 let matrizA = [
-              [1, 2, 3],
-              [4, 5, 6],
-              [7, 8, 9]
+              [1, 2],
+              [3, 4],
+              [5, 6]
 ];
+    
+transporMatriz(matrizA);
 
-console.log("Matriz Original:");
-imprimirMatriz(matrizA);
-
-let matrizTransposta = transporMatriz(matrizA);
 
 
 
