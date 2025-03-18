@@ -1,10 +1,16 @@
-function verificarNumeroPrimo(n){
-    if (n <= 1){
-        return false; //nº <= não são primos
+function verificarNumeroPrimo(n){ //não precisa declrar n, pq ele é uma variável que só existe para a função
+    if (n < 2){
+        return false; //nº <= 1 não são primos
     } 
-    for (let i = 2; i <= Math.sqrt(n); i++){
-        if( n % i === 0){
-            return false; //se for divisivel por algum nº além de 1 e ele mesmo, ñ é primo
+    if( n <= 3){
+        return true; // 3 e 2 são primos
+    }
+    if(n % 2 == 0){
+        return false; //nº pares não são primos
+    }
+    for(let i = 3; i < n; i+=2){
+        if(n % i == 0){
+            return false; 
         }
     }
     return true;
