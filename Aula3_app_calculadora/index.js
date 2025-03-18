@@ -2,8 +2,20 @@
 
 //importar as funções 
 const calc = require('./calculadora');
+const express = require('express');
 
-console.log(calc.somar(2,3));
+const app = express();
+
+app.get('/', (req, res) =>{
+    res.send('Olá mundo!')
+});
+
+const PORT = 8080;
+app.listen(PORT, () =>{
+    console.log('app rodando na porta ' + PORT);
+})
+
+/*console.log(calc.somar(2,3));
 console.log(calc.subtrair(2,3));
 console.log(calc.multiplicar(2,3));
-console.log(calc.dividir(2,3));
+console.log(calc.dividir(2,3));*/
