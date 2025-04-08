@@ -31,7 +31,7 @@ app.get('/', (req, res) =>{
 //Quando o user acessar esse endereço '/somar/:a/:b' acontece o seguinte:
 app.get('/somar/:a/:b', (req, res) =>{
     //converte o parâmetro 'a' da URL para o nº (tipo float)
-    const a = parseFloat(req.params.a); //req.params recupera o valor do parametro a que o user inseriu
+    const a = parseFloat(req.params.a); //req.params recupera o valor do parametro que o user inseriu
     //converte o parâmetro 'b' da URL para o nº (tipo float)
     const b = parseFloat(req.params.b);
     //chama a função somar do módulo calculadora com os valores 'a' e 'b'
