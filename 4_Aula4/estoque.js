@@ -33,7 +33,7 @@ function listar(){
 function editar(id, qtd){
     let item_valido = true;
     if(
-        !is_id_cadastrado(id) || //se o id não esta cadastrado
+        !is_numerico(id) || //se o id não esta cadastrado
         !is_id_cadastrado(id) || // se o id não for numerico
         !is_numerico(qtd)
     ){
