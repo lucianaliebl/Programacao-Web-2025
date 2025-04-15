@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>APP_HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+ <body>
+
+    <div class ="container"> <!--container é a pagina em branco-->
+        <div class="row"> <!--primeira linha-->
+            <div class="col-12 border border-sucess text-center p-5"> <!--uma coluna na primeira linha. Text center centraliza o texto. P é o paging ou espaçamento. bg-dark é a cor de fundo-->
+                <h1>BANNER</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 border border-danger"> <!--primeira coluna na segunda linha-->
+                <h1>MENU</h1>
+                <button type="button" class="btn btn-success w-100 mt-3">Botão 1</button> <!--na pag. no bootstrap copiar o link de componentes/button-->
+                <button type="button" class="btn btn-danger w-100 mt-3">Botão 2</button>  <!--w-100 para o botão ocupar 100% da largura da coluna-->
+                <button type="button" class="btn btn-warning w-100 mt-3 mb-3">Botão 3</button> <!--mt margem em relação ao topo e mb margem em relação ao inferior-->
+            </div>
+            <div class="col-9 border border-warning"> <!--segunda coluna na segunda linha-->
+                <h1>Área de conteúdo</h2>
+                    <div class="alert alert-primary" role="alert">
+                        Olá, {{nome}}! <!--tudo o que o mustache encontrar {} ele entende que é uma variavel-->
+                      </div>
+            </div>
+        </div>
+    </div>
+ </body>
+</html>
