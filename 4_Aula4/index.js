@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 //Programar o comportamento da aplicação para essa rota
 app.get('/adicionar/:id/:nome/:qtd', (req,res)=>{
-    let item = { //variavet item do tipo objeto. Criando o objeto
+    let item = { //variavel item do tipo objeto. Criando o objeto
         id: Number(req.params.id), // o id é o que o usuario digitou como parametro. Usa number para garantir que será numero
         nome: req.params.nome, //preenche com os valores que o user digitou na requisição 
         qtd: Number(req.params.qtd),

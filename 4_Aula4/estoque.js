@@ -35,13 +35,13 @@ function editar(id, qtd){
     if(
         !is_numerico(id) || //se o id não esta cadastrado
         !is_id_cadastrado(id) || // se o id não for numerico
-        !is_numerico(qtd)
+        !is_numerico(qtd) // se qtd n"ao for numerico
     ){
         item_valido = false;
     }
 
     if(item_valido){
-        itens.forEach(item_cadastrado => { //para cada item cadastrado comporo o id cadastrado com o id que quero editar. 
+        itens.forEach(item_cadastrado => { //para cada item cadastrado comparo o id cadastrado com o id que quero editar. 
             if(item_cadastrado.id == id){
                 item_cadastrado.qtd = qtd; //se for o id do produto que eu quero, modifico a qtd do item
             }

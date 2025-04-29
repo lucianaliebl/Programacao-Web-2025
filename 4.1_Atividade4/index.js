@@ -4,7 +4,7 @@ const express = require('express');
 //Cria uma aplicação do tipo express
 const app = express(); 
 
-//Importa as funções definidas no arquivo 
+//Importa as funções definidas no arquivo estoque.js
 const estoque = require('./estoque');
 
 //Define a rota adicionar. Os parâmetros id, nome e qtd são extraídos da URL.

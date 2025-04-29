@@ -1,4 +1,4 @@
-//Módulo: essa funções ficam em um arquivo a parte e toda vez que precisar dessas funções eu carrego esse modelu
+//Módulo: essa funções ficam em um arquivo a parte e toda vez que precisar dessas funções eu carrego esse módulo
 
 //importar as funções 
 const calc = require('./calculadora');
