@@ -11,7 +11,9 @@
     <div style="display: flex; justify-content: center;">
         <h2>Agendamento</h2>
     </div>
-    <form>
+
+    <form action ="/agendar_consulta" method="GET">
+
     <div class ="container"> <!--container é a pagina em branco-->
         <div class ='row'> <!--Primeira Linha-->
             <div class="col-12"> <!--uma coluna na primeira linha. Text center centraliza o texto.-->
@@ -51,30 +53,35 @@
                 <h4>Dados da Consulta</h4>
             </div>
             <div class="col-6 mb-3">
-                <label for="disabledSelect" class="form-label">Clínica</label>
-                <select id="disabledSelect" class="form-select">
+                <label for="clinica" class="form-label">Clínica</label>
+                <select class="form-select" aria-label = "" name = "clinica" id="clinica">
                   <option>Clínicas</option>
+                  <option value = "Clinica Brasilia">Clinica Brasilia</option>
+                  <option value = "Clinica Taguatinga">Clinica Taguatinga</option>
+                  <option value = "Clinica Ceilandia">Clinica Ceilandia</option>
                 </select>                
             </div>     
             <div class="col-6 mb-3">
-                <label for="disabledSelect" class="form-label">Especialidade</label>
-                <select id="disabledSelect" class="form-select">
+                <label for="especialidade" class="form-label">Especialidade</label>
+                <select class="form-select" aria-label = "" name = "especialidade" id="especialidade">
                   <option>Especialidades</option>
+                  <option value = "Ortopedia">Ortopedia</option>
+                  <option value = "Cardiologia">Cardiologia</option>
+                  <option value = "Pediatria">Pediatria</option>
+                
                 </select>                 
             </div>        
             <div class="col-6 mb-3">
-                <label for="exampleInputData" class="form-label">Data</label>
-                <input type="date" class="form-control" id="exampleInputData" aria-describedby="dataHelp">                
-                
+                <label for="data_consulta" class="form-label">Data da consulta:</label>
+                <input type="date" class="form-control" name="data_consulta" id="data_consulta">                 
             </div>  
             <div class="col-6 mb-3">
-                <label for="exampleInputHora" class="form-label">Hora</label>
-                <input type="time" class="form-control" id="exampleInputHora" aria-describedby="horaHelp">                
-                
+                <label for="hora_consulta" class="form-label">Hora da consulta</label>
+                <input type="time" class="form-control" name="hora_consulta" id="hora_consulta">
             </div>     
             <div class="col-12 mb-3">
-                <label for="exampleInputObservações" class="form-label">Observações</label>
-                <input type="text" class="form-control" id="exampleInputObservações" placeholder="Insira observações aqui" aria-describedby="observaçõesHelp">                
+                <label for="observações" class="form-label">Observações</label>
+                <input type="text" class="form-control" name="observações" id="observações" placeholder="Insira observações aqui" aria-describedby="observaçõesHelp">                
             </div>                                        
         </div>
         <div class="col-12 mb-3" style="display: flex; justify-content: center;">
