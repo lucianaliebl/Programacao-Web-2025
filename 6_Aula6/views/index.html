@@ -12,7 +12,13 @@
         <h2>Agendamento</h2>
     </div>
 
-    <form action ="/agendar_consulta" method="GET">
+    <div class="col-12 mt-3">
+        <div class="alert alert-danger">
+            <strong>Formulario</strong> invalido! Preencha todos os campos.
+        </div>
+    </div>
+
+    <form action ="/agendar_consulta" method="POST">
 
     <div class ="container"> <!--container é a pagina em branco-->
         <div class ='row'> <!--Primeira Linha-->
@@ -21,27 +27,27 @@
             </div>
             <div class="col-6 mb-3">
                 <label for="exampleInputNome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="exampleInputName" placeholder="Insira seu nome aqui" aria-describedby="nomeHelp">
+                <input type="text" class="form-control" id="exampleInputName" placeholder="Insira seu nome aqui" aria-describedby="nomeHelp" value="{{dados_consulta.nome}}">
             </div>
             <div class="col-6 mb-3">
                 <label for="exampleInputSobrenome" class="form-label">Sobrenome</label>
-                <input type="text" class="form-control" id="exampleInputSobrenome" placeholder="Insira seu sobrenome aqui" aria-describedby="sobrenomeHelp"> 
+                <input type="text" class="form-control" id="exampleInputSobrenome" placeholder="Insira seu sobrenome aqui" aria-describedby="sobrenomeHelp" value="{{dados_consulta.sobrenome}}"> 
             </div>
             <div class="col-6 mb-3"> 
                 <label for="exampleInputCPF" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="exampleInputCPF" placeholder="XXX.XXX.XXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                <input type="text" class="form-control" id="exampleInputCPF" placeholder="XXX.XXX.XXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" value="{{dados_consulta.cpf}}">
             </div>           
             <div class="col-6 mb-3"> 
                 <label for="exampleInputDataNascimento" class="form-label">Data Nascimento</label>
-                <input type="date" class="form-control" id="exampleInputDataNascimento" aria-describedby="dataNascimentoHelp">
+                <input type="date" class="form-control" id="exampleInputDataNascimento" aria-describedby="dataNascimentoHelp" value="{{dados_consulta.dataNascimento}}">
             </div>            
             <div class="col-6 mb-3"> 
                 <label for="exampleInputTelefone" class="form-label">Telefone</label>
-                <input type="text" class="form-control" id="exampleInputTelefone" placeholder="(XX) XXXXX-XXXX" aria-describedby="telefoneHelp">
+                <input type="text" class="form-control" id="exampleInputTelefone" placeholder="(XX) XXXXX-XXXX" aria-describedby="telefoneHelp" value="{{dados_consulta.telefone}}">
             </div>      
             <div class="col-6 mb-3"> 
                 <label for="exampleInputCEP" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="exampleInputCEP"  placeholder="XXXXX-XXX"aria-describedby="cepHelp">
+                <input type="text" class="form-control" id="exampleInputCEP"  placeholder="XXXXX-XXX"aria-describedby="cepHelp" value="{{dados_consulta.cep}}">
             </div>   
             <div class="col-12 mb-3"> 
                 <label for="exampleInputEndereço" class="form-label">Endereço</label>
