@@ -76,7 +76,7 @@ app.post('/agendar_consulta', (req, res)=>{
     }
 
     if(req.body.hora_consulta.length == 0){
-        form_invalido = true;
+        form_invalido = true; 
         campos_invalidos.push("Hora da consulta");
     }
 
